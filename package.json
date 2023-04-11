@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "dev:Layout": "vue-cli-service serve ./tests/Layout",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
