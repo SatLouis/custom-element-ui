@@ -5,8 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "dev:Layout": "vue-cli-service serve ./tests/Layout",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "dev:Layout": "vue-cli-service serve ./tests/Layout"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -22,6 +22,8 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "sass": "^1.62.0",
+    "sass-loader": "^13.2.2"
   }
 }

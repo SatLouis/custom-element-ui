@@ -1,2 +1,2 @@
-export { default as Row } from "./Row.vue";
-export { default as Col } from "./Col.vue";
+export { default as Row } from "./Row/Row";
+export { default as Col } from "./Col/Col";

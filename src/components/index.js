@@ -1,6 +1,5 @@
 import { Row, Col } from "./Layout";
 import addInstall from "./utils/addInstall";
-
 const components = [Row, Col];
 
 for (const comp of components) {

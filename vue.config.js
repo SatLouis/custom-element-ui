@@ -4,10 +4,8 @@ module.exports = defineConfig({
   lintOnSave: "warning",
   devServer: {
     client: {
-      logging: "info",
-      // overlay: {
-      //   errors: false,
-      // },
+      logging: "warn",
+      overlay: false,
     },
   },
 });

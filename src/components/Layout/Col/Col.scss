@@ -1,0 +1,58 @@
+$responsiveMap: (
+  xs: 'width < 768px',
+  sm: 'width >= 768px',
+  md: 'width >= 992px',
+  lg: 'width >= 1200px',
+  xl: 'width >= 1920px',
+);
+.el-col {
+  float: left;
+  box-sizing: border-box;
+  @for $num from 0 through 24 {
+    &-span-#{$num} {
+      width: calc(100% / 24) * $num;
+    }
+    &-offset-#{$num} {
+      margin-left: calc(100% / 24) * $num;
+    }
+    &-push-#{$num} {
+      position: relative;
+      left: calc(100% / 24) * $num;
+    }
+    &-pull-#{$num} {
+      position: relative;
+      right: calc(100% / 24) * $num;
+    }
+  }
+  /* 
+      xs: [Number, Object], //<768px
+      sm: [Number, Object], //>=768px
+      md: [Number, Object], //>=992px
+      lg: [Number, Object], //>=1200px
+      xl: [Number, Object], //>=1920px
+   */
+  @each $k, $v in $responsiveMap {
+    @media only screen and ($v) {
+      @for $num from 0 through 24 {
+        &-#{$k}-#{$num},
+        &-#{$k}-span-#{$num} {
+          width: calc(100% / 24) * $num;
+        }
+        &-#{$k}-offset-#{$num} {
+          margin-left: calc(100% / 24) * $num;
+        }
+        &-#{$k}-push-#{$num} {
+          position: relative;
+          left: calc(100% / 24) * $num;
+        }
+        &-#{$k}-pull-#{$num} {
+          position: relative;
+          right: calc(100% / 24) * $num;
+        }
+      }
+    }
+  }
+  &-span-0 {
+    display: none;
+  }
+}

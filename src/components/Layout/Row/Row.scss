@@ -1,0 +1,47 @@
+$is-justify: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  space-around: space-around,
+  space-between: space-between,
+);
+$is-align: (
+  top: flex-start,
+  middle: center,
+  bottom: flex-end,
+);
+
+.el-row {
+  box-sizing: border-box;
+
+  &--flex {
+    display: flex;
+
+    &::before,
+    &::after {
+      display: none !important;
+    }
+
+    @each $key, $val in $is-justify {
+      &.is-justify-#{ $key } {
+        justify-content: $val;
+      }
+    }
+
+    @each $key, $val in $is-align {
+      &.is-align-#{ $key } {
+        align-items: $val;
+      }
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
